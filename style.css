@@ -1,0 +1,163 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+::-webkit-scrollbar {
+    width: 0px;
+}
+html {
+    scroll-behavior: smooth;
+}
+a:link {
+    text-decoration: none;
+    color: black;
+}
+
+/* Main Home Page */
+.main{
+    width: 100%;
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+}
+.hero-img{
+    position: absolute;
+    margin-top: 30px;
+}
+.container{
+    display: flex;
+    justify-content: center;
+    margin: 310px auto;
+    position: absolute;
+}
+p{
+    font-family: 'Poppins';
+}
+.main p{
+    position: relative;
+    top: 100px;
+}
+.garis{
+    position: relative;
+    width: 100em;
+    margin: 0 auto;
+    border-right: 2px solid grey;
+    font-size: 300%;
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    transform: translateY(-50%);
+    color: black;
+}
+
+.animasi-ketikan{
+    animation: ketikan 4s steps(28) 0.5s 1 normal both,
+            kedip 500ms steps(20) infinite normal;
+}
+
+/* animation: 
+    name duration   -> Nama dari animasi yang dibuat
+    animasi_durasi  -> Menentukan berapa lama animasi berjalan
+    timing_fungtion -> Membagi-bagi tingkat kecepatan suatu gerakan animasi
+    animasi_delay   -> Waktu yang dibutuhkan sebelum animasi dimulai
+    iterasi         -> Berapa kali animasi akan dijalankan.
+    direction       -> Arah gerakan animasi
+    play_state      -> paused: Untuk mem-‘pause’ animasi. running: Untuk menjalankan kembali animasi.
+*/
+@keyframes ketikan {
+    from{
+        width: 0;
+    } to {
+        width: 13em;
+    }
+}
+@keyframes kedip {
+    from{
+        border-right-color: rgba(49, 49, 49, 0.75);
+    } to {
+        border-right-color: transparent;
+    }
+}
+
+
+/* Content */
+.main-content{
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    background-color: white;
+}
+.main-content .scroll-me .scroll-satu a:link{
+    color: black;
+}
+.scroll-me{
+    margin: auto;
+    display: block;
+    height: 50px;
+    width: 100%;
+    text-align: center;
+    position: fixed;
+    /* background-color: white; */
+}
+.scroll-satu{
+    position: relative;
+    width: 20px;
+    height: 20px;
+    border-left: 2px solid #4e4e4e;
+    border-bottom: 2px solid #4e4e4e;
+    transform: rotate(-45deg);
+    border-radius: 2px;
+    text-align: center;
+    margin: auto;
+    cursor: pointer;
+    
+}
+.scroll-tulisan{
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+    position: relative;
+    margin: auto 14px;
+    padding: 10px;
+    box-sizing: border-box;
+}
+.main_post{
+    display: flex;
+    justify-content: center;
+    margin: 150px auto;
+}
+.post{
+    width: 50%;
+    margin: auto;
+    /* border: 1px solid grey; */
+    padding: 5px;
+    box-sizing: border-box;
+}
+.post #judul_post{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 600;
+    line-height: 37px;
+}
+.post h3{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    line-height: 27px;
+}
+#link a{
+    display: block;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    line-height: 27px;
+    color: black;
+    text-decoration-line: underline;
+}
+
+
+/* ---------------------------- Mobile ------------------------------ */
+@media only screen and (max-width: 600px){
+    .garis{
+        font-size: 150%;
+    }
+    .post{
+        width: 90%;
+    }
+}
