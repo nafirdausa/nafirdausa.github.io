@@ -51,7 +51,7 @@ p{
 }
 
 .animasi-ketikan{
-    animation: ketikan 4s steps(28) 0.5s 1 normal both,
+    animation: ketikan 5s steps(28) 1s 1 normal both,
             kedip 500ms steps(20) infinite normal;
 }
 
@@ -156,8 +156,19 @@ p{
 @media only screen and (max-width: 600px){
     .garis{
         font-size: 150%;
+        margin: -90px auto;
     }
     .post{
         width: 90%;
+    }
+
+    @keyframes kedip {
+        from{
+            border-right-color: rgba(49, 49, 49, 0.75);
+            height: 40px
+        } to {
+            border-right-color: transparent;
+            height: 40px
+        }
     }
 }
