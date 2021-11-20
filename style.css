@@ -171,4 +171,12 @@ p{
             height: 40px
         }
     }
+
+    .scroll-me{
+        margin: -40px auto;
+    }
+
+    .main_post{
+        margin: 100px auto;
+    }
 }
