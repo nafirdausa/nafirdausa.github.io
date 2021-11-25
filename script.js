@@ -10,5 +10,12 @@ window.onscroll = function () {
       document.getElementById('scroll-me').style.color = 'black';
 
     }
-
 };
+
+// mengubah tema background
+const body = document.querySelector('html');
+const toggleButton = document.getElementById('toggleSwitch');
+toggleButton.onclick = function() {
+    toggleButton.classList.toggle('active');
+    body.classList.toggle('active')
+}
